@@ -1,10 +1,16 @@
 <template>
-  <div></div>
+  <div>
+    <Book />
+  </div>
 </template>
 
 <script>
+import Book from "../book";
 export default {
   name: "",
+  components: {
+    Book,
+  },
 };
 </script>
 
