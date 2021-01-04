@@ -39,7 +39,7 @@ export default {
 
 <style lang="less" scoped>
 .header {
-  border-bottom: 1px solid pink;
+  border-bottom: 1px solid #f1f1f1;
 }
 .header-container {
   height: 60px;
