@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <Hearder />
     <Topic />
   </div>
@@ -18,5 +18,8 @@ export default {
 </script>
 
 <style>
+html {
+  background-color: #f4f5f5;
+}
 </style>
 
