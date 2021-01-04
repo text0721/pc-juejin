@@ -1,9 +1,19 @@
-import Vue from 'vue'
-import App from './App.vue'
-import './plugins/element.js'
+// @ts-nocheck
+import Vue from "vue";
+import App from "./App";
 
-Vue.config.productionTip = false
+import router from "./router";
+import store from "./store";
+
+import "./plugins/element";
+
+// 引入公共资源
+import "./styles/reset.css";
+
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  render: (h) => h(App),
+  router,
+  store,
+}).$mount("#app");
