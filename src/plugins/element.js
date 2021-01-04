@@ -1,4 +1,5 @@
 import Vue from 'vue'
-import { Button } from 'element-ui'
+import { Button, Icon } from 'element-ui'
 
-Vue.use(Button)
+Vue.use( Button )
+Vue.use( Icon )
