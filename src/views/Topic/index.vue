@@ -4,7 +4,9 @@
     <div class="Topic-left">
       <nav class="navigation">
         <ul class="nav-list">
-          <li class="nav-item active"><a title="推荐">推荐</a></li>
+          <li class="nav-item active">
+            <a title="推荐" :on-click="goLink">推荐</a>
+          </li>
           <li class="nav-item"><a title="热门">热门</a></li>
           <li class="nav-item"><a title="关注">关注</a></li>
           <li class="nav-item"><a title="上班摸鱼">上班摸鱼</a></li>
@@ -338,6 +340,11 @@ export default {
       textarea: "",
     };
   },
+  methods:{
+    goLink(){
+      
+    }
+  }
 };
 </script>
 
@@ -408,7 +415,7 @@ a {
 }
 .Topic-main .el-textarea__inner {
   border: none;
-  width: 400px;
+  width: 500px;
   height: 100%;
   margin: 5px;
   background: #f4f5f5;
@@ -755,7 +762,6 @@ a {
   z-index: 5;
   /* pointer-events: all; */
   position: fixed;
-      top: 50px;
-
+  top: 50px;
 }
 </style>
