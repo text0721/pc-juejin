@@ -3,34 +3,39 @@
     <div class="home-outer">
       <div class="home-container">
         <ul class="home-recommend">
-          <li><a href="">热门</a></li>
+          <li class="active"><a href="">热门</a></li>
           <li><a href="">最新</a></li>
           <li><a href="">热榜</a></li>
         </ul>
         <div class="recommend-content">
           <div class="contentList">
             <div class="content">
-              <p>掘金酱 . 8小时前</p>
-              <p>🏆 技术专题第八期 | 聊聊缓存的妙用和问题</p>
-              <p>来和掘金酱一起聊一聊缓存的妙用和问题！</p>
+              <p class="contentList-detail">掘金酱 . 8小时前</p>
+              <p class="contentList-title">
+                🏆 技术专题第八期 | 聊聊缓存的妙用和问题
+              </p>
+              <p class="contentList-describe">
+                来和掘金酱一起聊一聊缓存的妙用和问题！
+              </p>
             </div>
             <img
+              class="imglogo"
               src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/29b4170d37eb458285aedf1729e9c921~tplv-k3u1fbpfcp-zoom-mark-crop-v2:0:0:120:120.awebp"
               alt=""
             />
           </div>
-          <el-card class="box-card">
-            <ul>
-              <li>
+
+          <ul class="content-item">
+            <li class="content-outer">
+              <div class="content-item-container">
                 <div class="detail">
                   <a href="">掘金酱</a>
-                  <span>.1月前.</span>
-                  <a href="">前端 /</a>
-                  <a href="">后端 /</a>
-                  <a href="">Andriod /</a>
+                  .<a>1月前</a>.
+                  <a href="">前端</a>/ <a href="">后端</a>/
+                  <a href="">Andriod</a>/
                   <a href="">程序员</a>
                 </div>
-                <a href="" class="title">🏆 掘金年度征文 | 技术人的2020</a>
+                <p class="title">🏆 掘金年度征文 | 技术人的2020</p>
                 <div class="assist-container">
                   <div class="assist">
                     <img
@@ -39,7 +44,7 @@
                     />
                     <span>200</span>
                   </div>
-                  <div>
+                  <div class="comment">
                     <img
                       src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHRpdGxlPjc1MzFEREU0LTZCMzgtNDI4Ny04QTJBLUY2ODVGMDgzNUFGQzwvdGl0bGU+PGRlZnM+PHJlY3QgaWQ9ImEiIHg9IjU5IiB5PSI1NCIgd2lkdGg9IjU0IiBoZWlnaHQ9IjI1IiByeD0iMSIvPjxtYXNrIGlkPSJiIiB4PSIwIiB5PSIwIiB3aWR0aD0iNTQiIGhlaWdodD0iMjUiIGZpbGw9IiNmZmYiPjx1c2UgeGxpbms6aHJlZj0iI2EiLz48L21hc2s+PC9kZWZzPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02OCAtNTYpIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGZpbGw9IiNCMkJBQzIiIGQ9Ik03MiA2MXY4LjAzOGg0LjQ0NEw4MS4xMTEgNzJ2LTIuOTYySDg0VjYxeiIvPjx1c2Ugc3Ryb2tlPSIjRURFRUVGIiBtYXNrPSJ1cmwoI2IpIiBzdHJva2Utd2lkdGg9IjIiIHhsaW5rOmhyZWY9IiNhIi8+PC9nPjwvc3ZnPg=="
                       alt=""
@@ -53,18 +58,23 @@
                     />
                   </div>
                 </div>
-              </li>
-            </ul>
-          </el-card>
+              </div>
+              <img
+                class="imgpho"
+                src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/efe1fb78335d4fc8ba2fc8a455057c6c~tplv-k3u1fbpfcp-zoom-mark-crop-v2:0:0:120:120.awebp"
+                alt=""
+              />
+            </li>
+          </ul>
         </div>
       </div>
       <div class="navBar">
         <div class="login">
-          <p>掘金 - juejin.cn</p>
-          <p>一个帮助开发者成长的社区</p>
+          <p class="title">掘金 - juejin.cn</p>
+          <p class="help">一个帮助开发者成长的社区</p>
           <div class="phone">
             <el-input placeholder="请输入手机号码" class="input-with-select">
-              <el-select slot="prepend" placeholder="+86">
+              <el-select placeholder="+86" slot="prepend">
                 <el-option label="中国" value="1"></el-option>
                 <el-option label="美国" value="2"></el-option>
                 <el-option label="法国" value="3"></el-option>
@@ -76,9 +86,10 @@
               <el-button slot="append">获取验证码</el-button>
             </el-input>
           </div>
-          <el-button type="primary">立即登录</el-button>
-          <p>立即登录即表示</p>
-          <p>同意 <a href="">用户协议 、 隐私政策</a></p>
+          <el-button type="primary" class="login-now">立即登录</el-button>
+
+          <p class="agreement">立即登录即表示</p>
+          <p class="agree">同意 <a href="">用户协议 、 隐私政策</a></p>
         </div>
         <div class="advert1">
           <img
@@ -97,18 +108,21 @@
             src="https://sf6-scmcdn2-tos.pstatp.com/xitu_juejin_web/img/app-install.6226a3b.png"
             alt=""
           />
-          <p>下载掘金客户端</p>
-          <p>一个帮助开发者成长的社区</p>
+          <div class="download">
+            <p class="code-bottom">下载掘金客户端</p>
+            <p>一个帮助开发者成长的社区</p>
+          </div>
         </div>
         <div class="author-list">
-          <p>🎖️作者榜</p>
+          <p class="list-header">🎖️作者榜</p>
           <ul class="list">
             <li>
-              <a href="">
-                <img
-                  src="https://user-gold-cdn.xitu.io/2020/3/19/170f1d84faa260af?imageView2/1/w/100/h/100/q/85/format/webp/interlace/1"
-                  alt=""
-                />
+              <img
+                class="author-img"
+                src="https://sf3-ttcdn-tos.pstatp.com/img/user-avatar/f7d2c0fd0a42bb342fb8dc8a9d573224~300x300.image"
+                alt=""
+              />
+              <div class="list-content">
                 <p>
                   思思同学
                   <img
@@ -116,15 +130,16 @@
                     alt=""
                   />
                 </p>
-                <p>前端CV工程师 @ 西厂</p></a
-              >
+                <p>前端CV工程师 @ 西厂</p>
+              </div>
             </li>
             <li>
-              <a href="">
-                <img
-                  src="https://user-gold-cdn.xitu.io/2020/3/19/170f1d84faa260af?imageView2/1/w/100/h/100/q/85/format/webp/interlace/1"
-                  alt=""
-                />
+              <img
+                class="author-img"
+                src="https://user-gold-cdn.xitu.io/2020/7/8/1732ee33bc6d7dc6?imageView2/1/w/100/h/100/q/85/format/webp/interlace/1"
+                alt=""
+              />
+              <div class="list-content">
                 <p>
                   思思同学
                   <img
@@ -132,15 +147,16 @@
                     alt=""
                   />
                 </p>
-                <p>前端CV工程师 @ 西厂</p></a
-              >
+                <p>前端CV工程师 @ 西厂</p>
+              </div>
             </li>
             <li>
-              <a href="">
-                <img
-                  src="https://user-gold-cdn.xitu.io/2020/3/19/170f1d84faa260af?imageView2/1/w/100/h/100/q/85/format/webp/interlace/1"
-                  alt=""
-                />
+              <img
+                class="author-img"
+                src="https://user-gold-cdn.xitu.io/2020/3/19/170f1d84faa260af?imageView2/1/w/100/h/100/q/85/format/webp/interlace/1"
+                alt=""
+              />
+              <div class="list-content">
                 <p>
                   思思同学
                   <img
@@ -148,43 +164,46 @@
                     alt=""
                   />
                 </p>
-                <p>前端CV工程师 @ 西厂</p></a
-              >
+                <p>前端CV工程师 @ 西厂</p>
+              </div>
             </li>
           </ul>
-          <p>完整榜单 ></p>
+          <p class="complete">完整榜单 ></p>
         </div>
         <div class="guide">
           <div class="guide-item">
             <img
+              class="guide-img"
               src="https://sf6-scmcdn2-tos.pstatp.com/xitu_juejin_web/img/juejin-tutu.d58819c.png"
               alt=""
             />
-            <P>掘金社区漫游指南</P>
+            <P class="guide-community">掘金社区漫游指南</P>
           </div>
           <div class="guide-item">
             <img
+              class="guide-img"
               src="https://sf6-scmcdn2-tos.pstatp.com/xitu_juejin_web/img/juejin-extension-icon.4b79fb4.png"
               alt=""
             />
-            <p>下载掘金浏览器插件</p>
+            <p class="guide-community">下载掘金浏览器插件</p>
           </div>
           <div class="guide-item">
             <img
+              class="guide-img"
               src="https://sf6-scmcdn2-tos.pstatp.com/xitu_juejin_web/img/juejin-miner.b78347c.png"
               alt=""
             />
-            <p>前往掘金翻译计划</p>
+            <p class="guide-community">前往掘金翻译计划</p>
           </div>
         </div>
         <div class="link">
-          <p>
-            <a href="">关于 .</a> <a href="">营业执照 .</a
-            ><a href="">友情链接</a>
+          <p class="license">
+            <a href="">关于</a>.<a href="">营业执照</a>.<a href="">友情链接</a>
           </p>
-          <p>
-            <a href="">用户协议 .</a><a href="">隐私政策 .</a>
-            <a href="">使用指南 .</a>
+          <p class="use">
+            <a href="">用户协议</a>.<a href="">隐私政策</a>.<a href=""
+              >使用指南</a
+            >
           </p>
           <p><a href="">京ICP备18012699号-3</a></p>
           <p><a href="">京公网安备11010802026719号</a></p>
@@ -192,7 +211,7 @@
           <p>公司地址：北京市海淀区信息路甲28号13层B座13B-5</p>
           <p>公司座机：010-83434395</p>
           <p><a href="">©2021 掘金</a></p>
-          <div>
+          <div class="weixin">
             <img
               src="https://sf6-scmcdn2-tos.pstatp.com/xitu_juejin_web/img/weibo.0cd39f5.png"
               alt=""
@@ -222,29 +241,299 @@ export default {
   width: 960px;
   margin: 0 auto;
   padding-top: 15px;
-  //   display: flex;
+  display: flex;
 }
 .home-container {
   width: 700px;
   background-color: #fff;
-  padding: 0 20px;
+  // padding: 0 20px;
 }
 .home-recommend {
   display: flex;
   height: 46px;
+  padding-left: 15px;
   align-items: center;
   border-bottom: 1px solid #f4f4f4;
   li {
     padding: 0 12px;
     border-right: 1px solid #eaeaea;
     font-size: 14px;
+    &.active a {
+      color: #007fff;
+    }
+    a {
+      text-decoration: none;
+    }
   }
   li:nth-of-type(3) {
     border: none;
   }
 }
+.content {
+  cursor: pointer;
+}
+.recommend-content .contentList {
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f4f4f4;
+  cursor: pointer;
+}
+.contentList-detail {
+  color: #bab2c2;
+}
+.contentList-title {
+  height: 20px;
+  color: #2e3135;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 6px 0 12px;
+}
+.contentList-describe {
+  color: #bab2c2;
+  font-size: 14px;
+}
+.recommend-content .contentList .imglogo {
+  height: 60px;
+  width: 60px;
+}
+.content-item {
+  padding: 18px 24px;
+  border-bottom: 1px solid #f4f4f4;
+}
+.content-outer {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  .imgpho {
+    width: 60px;
+    height: 60px;
+  }
+}
+.content-item .detail {
+  color: #bab2c2;
+  a {
+    text-decoration: none;
+    color: #bab2c2;
+    padding: 0 8px;
+  }
+  a:nth-of-type(1) {
+    padding-left: 0;
+  }
+}
+.content-item .title {
+  height: 20px;
+  color: #2e3135;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 6px 0 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.assist-container {
+  display: flex;
+}
+.assist-container .assist {
+  border: 1px solid #f4f4f4;
+  height: 24px;
+  padding: 0 10px;
+  color: #b2bac2;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+.assist-container .comment {
+  border: 1px solid #f4f4f4;
+  height: 24px;
+  padding: 0 10px;
+  color: #b2bac2;
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border-left: none;
+}
+.assist-container .forward {
+  height: 24px;
+  border: 1px solid #f4f4f4;
+  padding: 0 10px;
+  border-left: none;
+}
+.navBar {
+  width: 240px;
+  margin-left: 20px;
+}
+.navBar .login {
+  padding: 16px;
+  margin-bottom: 15px;
+  background-color: #fff;
+}
+.navBar .login .title {
+  height: 18px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #2e3135;
+}
+.navBar .login .help {
+  font-size: 14px;
+  margin: 8px 0;
+}
+.el-input {
+  border: none;
+  outline: none;
+}
+.phone .el-select {
+  width: 75px;
+}
+.verify {
+  margin: 8px 0;
+}
+.verify .el-button {
+  width: 100px;
+  color: #007fff;
+}
+.agreement {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #b2bac2;
+}
+.agree {
+  font-size: 14px;
+  margin: 5px 0;
+  color: #b2bac2;
+  a {
+    color: #007fff;
+  }
+}
+.login-now {
+  width: 100%;
+}
+.advert1 {
+  margin-bottom: 15px;
+  width: 240px;
+  height: 200px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.advert2 {
+  margin-bottom: 15px;
+  width: 240px;
+  height: 200px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
 
-// .navBar {
-//   width: 240px;
-// }
+.qr-code {
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  height: 82px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+  background-color: #fff;
+  img {
+    width: 50px;
+    height: 50px;
+  }
+  .code-bottom {
+    font-weight: 700;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+}
+
+.author-list {
+  margin-bottom: 15px;
+  // border-bottom: 1px solid #f4f4f4;
+  background-color: #fff;
+  .list-header {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+  .list {
+    li {
+      padding: 12px 16px;
+      display: flex;
+      cursor: pointer;
+      .author-img {
+        width: 46px;
+        height: 46px;
+      }
+    }
+  }
+}
+.list-content {
+  margin: 0 10px;
+}
+.author-list .complete {
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+  font-size: 14px;
+  color: #007fff;
+  border-top: 1px solid #f4f4f4;
+}
+.guide {
+  background-color: #fff;
+  padding-left: 10px;
+}
+.guide .guide-item {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  .guide-img {
+    width: 36px;
+    height: 36px;
+  }
+  .guide-community {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+}
+.link {
+  margin-top: 20px;
+  color: #b2bac2;
+  p {
+    margin: 5px 0;
+    a {
+      color: #b2bac2;
+      text-decoration: none;
+    }
+  }
+
+  .license {
+    a {
+      padding: 0 10px;
+      color: #b2bac2;
+      text-decoration: none;
+    }
+    a:nth-of-type(1) {
+      padding-left: 0;
+    }
+  }
+  .use {
+    a {
+      padding: 0 10px;
+      color: #b2bac2;
+      text-decoration: none;
+    }
+    a:nth-of-type(1) {
+      padding-left: 0;
+    }
+  }
+}
+.weixin {
+  img {
+    margin-right: 20px;
+    width: 26px;
+    height: 26px;
+  }
+}
 </style>

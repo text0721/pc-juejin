@@ -24,16 +24,32 @@
           <div class="header-write">
             <button>写文章<i class="el-icon-caret-bottom"></i></button>
           </div>
-          <button class="header-login">登录</button>
+          <button class="header-login" @click="handleLogin">登录</button>
         </div>
       </div>
     </div>
+    <Login v-show="isLogin" />
   </div>
 </template>
 
 <script>
+import Login from "../Login";
 export default {
   name: "Header",
+  data() {
+    return {
+      isLogin: false,
+    };
+  },
+  methods: {
+    handleLogin() {
+      console.log(this);
+      this.isLogin = true;
+    },
+  },
+  components: {
+    Login,
+  },
 };
 </script>
 
