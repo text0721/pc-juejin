@@ -1,133 +1,177 @@
 <template>
   <div class="book-container">
-    <div class="book-list">
-      <a href="#" class="item">
-        <div class="poster">
-          <img
-            src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/22cb14cfcc6047419eb4e1bfea62a57d~tplv-k3u1fbpfcp-zoom-1.image"
-            alt=""
-          />
-        </div>
-        <div class="info">
-          <div class="title">「玩转CSS的艺术之美」封面</div>
-          <div class="desc">
-            用简单易懂有趣的方式带领大家玩转CSS，以「CSS神操作骚技巧」为主题剖析CSS的艺术之美
-          </div>
-          <div class="author">
-            <div class="author-info">
-              <a href="#" class="user-img">
-                <img
-                  class="user-avatar"
-                  src="https://sf1-ttcdn-tos.pstatp.com/img/user-avatar/e62ad4bea75d27e49ccae4349b801f49~300x300.image"
-                  alt=""
-                />
-                <a href="#" class="author-name">
-                  <span class="name">hongshulin</span>
-                  <a href="#" class="rank">
-                    <img src="" alt="" />
-                  </a>
-                </a>
-              </a>
-            </div>
-            <div class="author-desc">
-              <span class="self-desc"> 高级前端 @ 网易 </span>
-            </div>
-          </div>
-          <div class="other">
-            <div class="price">￥19.9</div>
-            <div class="message">
-              <span class="point">16小节</span>
-              <span>
-                <span>1970</span>
-                <span>人已购买</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </a>
-      <a href="#" class="item">
-        <div class="poster">
-          <img
-            src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/22cb14cfcc6047419eb4e1bfea62a57d~tplv-k3u1fbpfcp-zoom-1.image"
-            alt=""
-          />
-        </div>
-        <div class="info">
-          <div class="title">「玩转CSS的艺术之美」封面</div>
-          <div class="desc">
-            用简单易懂有趣的方式带领大家玩转CSS，以「CSS神操作骚技巧」为主题剖析CSS的艺术之美
-          </div>
-          <div class="author">
-            <div class="author-info">
-              <a href="#" class="user-img">
-                <img
-                  class="user-avatar"
-                  src="https://sf1-ttcdn-tos.pstatp.com/img/user-avatar/e62ad4bea75d27e49ccae4349b801f49~300x300.image"
-                  alt=""
-                />
-                <a href="#" class="author-name">
-                  <span class="name">hongshulin</span>
-                  <a href="#" class="rank">
-                    <img src="" alt="" />
-                  </a>
-                </a>
-              </a>
-            </div>
-            <div class="author-desc">
-              <span class="self-desc"> 高级前端 @ 网易 </span>
-            </div>
-          </div>
-          <div class="other">
-            <div class="price">￥19.9</div>
-            <div class="message">
-              <span class="point">16小节</span>
-              <span>
-                <span>1970</span>
-                <span>人已购买</span>
-              </span>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div class="book-aside">
-      <div class="aside">
-        <div class="notice">
-          <a href="#" class="notice-content">
+    <div class="container">
+      <div class="book-list">
+        <div class="item">
+          <div class="poster">
             <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAA0CAMAAAD/uJueAAAAulBMVEUAAAA+Xpw4Voc3VYg3VYg4VYc8V4o3Voc3VYg4Vok4Vok8Woc4VYc3VYc3VYc5Voo4VYc5Vog5VY5AVZU4VYc3VYg3VYc4Vog4Vog7WIk4Vog5V4g4Vof///83VYcra979/f4radnh5u6ntctcdJ00W51CXo/t8PXQ1+OAk7MtZ9EuZckvYrxrgaY2WJT3+PqSor5FYpDX3efL0+C+x9i5w9WwvNCHmbd6jq9geKBVb5lMZ5Q7WInr7vOydVF/AAAAHXRSTlMACPexzPMi2fB/eBHl3WZMYDMbDLqrmYlVGppnRCmvHJoAAAFOSURBVEjHtdRpb4JAGARgEBAK1KpVe+5wWHpYFO19/v+/1ddasqabQCeN84UY88SJw671l3Qdi4u91wEnDvYBhkgn4ALgOl1OU4DqdHOlFMB0ulYSgOmkNoTpZJC2TpoQnQzS0kkTopMmrZ0aids7NDs1E8CbDH51MonnO/1IE4n8lO5kBt8JQrsm+XIFeKNYdzJJNisLwB3+EKXSxzm2O5kkkdwuEA9rIsmBVDWTJCvg2pooebYQMQuEHJFuCCKSJAX6LCnhsGQGnyUZvH+QHRYrMd7Bn0xMSbww9GtJv/yVPMgj9v60PjHEQXZ84O1BvieuC+tY0Ou9CZouJessBuZ3hmi8+uwwAF7yJmImOurg4/mTIJKTU7kClxVBJN0xsJpWBJEMRnomTVpy7q5nokg9E0Mkvc1MBNEzEaSeiSIy06QDgtQzEUTPtP3pCx5TpfyEn6+dAAAAAElFTkSuQmCC"
+              src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/22cb14cfcc6047419eb4e1bfea62a57d~tplv-k3u1fbpfcp-zoom-1.image"
               alt=""
             />
-            <span>小册下线分销提现公告</span>
-          </a>
-        </div>
-        <div class="section">
-          <div class="section-introduce">
-            <div class="title">掘金小册是什么？</div>
+          </div>
+          <div class="info">
+            <div class="title">「玩转CSS的艺术之美」封面</div>
             <div class="desc">
-              一个小篇幅、高浓度、成体系、有收益的技术学习平台
+              用简单易懂有趣的方式带领大家玩转CSS，以「CSS神操作骚技巧」为主题剖析CSS的艺术之美
+            </div>
+            <div class="author">
+              <div class="author-info">
+                <a href="#" class="user-img">
+                  <img
+                    class="user-avatar"
+                    src="https://sf1-ttcdn-tos.pstatp.com/img/user-avatar/e62ad4bea75d27e49ccae4349b801f49~300x300.image"
+                    alt=""
+                  />
+                  <a href="#" class="author-name">
+                    <span class="name">hongshulin</span>
+                    <a href="#" class="rank">
+                      <img src="" alt="" />
+                    </a>
+                  </a>
+                </a>
+              </div>
+              <div class="author-desc">
+                <span class="self-desc"> 高级前端 @ 网易 </span>
+              </div>
+            </div>
+            <div class="other">
+              <button class="buy">购买 ￥19.9</button>
+              <div class="try">试读</div>
             </div>
           </div>
-          <div class="wechat">
-            <div class="title">关注公众号 领取优惠码</div>
-            <div class="wechat-qr"></div>
+        </div>
+        <div class="buy-count">
+          <img
+            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSIjNjY2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2IDYpIj4KICAgICAgICA8Y2lyY2xlIGN4PSI5LjUiIGN5PSI5LjUiIHI9IjkuNSIvPgogICAgICAgIDxwYXRoIGQ9Ik01IDlsMyAzIDYtNiIvPgogICAgPC9nPgo8L3N2Zz4K"
+            alt=""
+          />
+          <span>1972 人已购买</span>
+        </div>
+      </div>
+
+      <!-- 目录部分 -->
+      <div class="book-card">
+        <!-- 目录 -->
+        <div class="book-menu-wrap">
+          <div class="menu active">目录</div>
+          <div class="produce">介绍</div>
+        </div>
+        <!-- 小册内容 -->
+        <div class="book-con">
+          <div class="con-header">小册内容</div>
+          <div class="con-info">
+            <a href="" class="info">
+              <div class="step">
+                <div class="round">1</div>
+              </div>
+              <div class="center">
+                <div class="title">准备篇：学前准备</div>
+                <div class="sub-line">
+                  <div class="try-read">试读</div>
+                  <div class="statistics">
+                    <span> 时长: 15分55秒 </span>
+                    <span> 8070次学习 </span>
+                    <span> 30条评论 </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="" class="info">
+              <div class="step">
+                <div class="round">2</div>
+              </div>
+              <div class="center">
+                <div class="title">准备篇：学前准备</div>
+                <div class="sub-line">
+                  <div class="try-read">试读</div>
+                  <div class="statistics">
+                    <span> 时长: 15分55秒 </span>
+                    <span> 8070次学习 </span>
+                    <span> 30条评论 </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="" class="info">
+              <div class="step">
+                <div class="round">3</div>
+              </div>
+              <div class="center">
+                <div class="title">准备篇：学前准备</div>
+                <div class="sub-line">
+                  <div class="try-read">试读</div>
+                  <div class="statistics">
+                    <span> 时长: 15分55秒 </span>
+                    <span> 8070次学习 </span>
+                    <span> 30条评论 </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+
+            <a href="" class="info">
+              <div class="step">
+                <div class="round">4</div>
+              </div>
+              <div class="center">
+                <div class="title">准备篇：学前准备</div>
+                <div class="sub-line">
+                  <div class="try-read">试读</div>
+                  <div class="statistics">
+                    <span> 时长: 15分55秒 </span>
+                    <span> 8070次学习 </span>
+                    <span> 30条评论 </span>
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
-        <div class="section-help">
-          <a href="#">
-            <img
-              src="//sf6-scmcdn2-tos.pstatp.com/xitu_juejin_web/img/author.c5d975e.png"
-              alt=""
-            />
-            <div class="con">成为作者</div>
-          </a>
-          <a href="#">
-            <img
-              src="//sf6-scmcdn2-tos.pstatp.com/xitu_juejin_web/img/feedback.1230fb5.png"
-              alt=""
-            />
-            <div class="con">建议反馈</div>
-          </a>
+        <!-- 作者介绍 -->
+        <div class="section">
+          <div class="article-content">
+            <h3>作者介绍</h3>
+            <p>
+              Hello，我是JowayYoung，一枚全栈前端开发工程师，目前就职于网易的互动娱乐事业群。涉足于前端领域和后端领域，擅长CSS/JS开发技巧、基于CSS/JS开发各种应用(网站应用、桌面应用、移动应用、服务应用、爬虫应用、同构应用、工具应用、脚手架应用、自动化应用、小程序应用)、数据分析和资料整理。日常喜欢学习与分享，经常会开发一些小工具提高工作效率和改善生活质量。
+            </p>
+            <p>
+              笔者是掘金近期专栏作家，目前专栏都是发表一些技巧性和概括性的文章，比较适合初中级前端开发者去阅读，后期会去发表一些原理性和架构性的进阶型文章。目前专栏有15篇文章，关注量1.1万+，点赞量1.2万+，阅读量40万+。有兴趣的同学可移步到笔者的掘金专栏JowayYoung，或关注笔者的微信公众号IQ前端。
+            </p>
+            <h3>小册介绍</h3>
+            <p>
+              笔者是一位很喜欢CSS艺术的人儿，欢迎各位同学与笔者一起探讨和进阶CSS。说到CSS，很多同学会觉得CSS很简单，但是也有一些同学会觉得CSS很困难。
+            </p>
+            <p>
+              为何会产生这种问题呢？觉得CSS简单的同学，可能很多场景都是使用UI框架开发，在开发过程中基本不会考虑如何编写好CSS或重构CSS，在遇到与需求有出入的情况顶多就使用样式覆盖的方式暴力解决。觉得CSS困难的同学，大多数情况是依据设计师提供的设计图还原切片图层，需考虑很多设计规范的问题，甚至一套样式规范应用到各种屏幕上，增加了CSS在适配上的难度。
+            </p>
+            <p>
+              本小册是一本深入学习和玩转CSS的电子工具书，附带大量的CSS神操作骚技巧，90%的内容纯讲CSS，也有两章会涉及到JS，当然这也难不倒用心学习的同学。CSS的存在当然会有它的原因，并不能觉得简单而去忽略它。前端三剑客缺少一个都不行，HTML、CSS和JS三者相辅相成，缺一不可。CSS的盒模型、文档流、选择器和属性等，组成了一个强而有力的CSS知识体系。学习好CSS不仅能解决一些工作问题，还能提升自己的审美标准，在业余时间也是一种消磨时间和挖掘艺术的方式。
+            </p>
+            <p>
+              所以在学习本小册前，我们可放平心态，想着学好CSS就足够了，完全不用管JS。我们现在是一位CSS艺术开发者，英文Title是Art
+              CSSer。CSS神操作骚技巧其实很简单，勇敢发挥你的想象力，你也会成为一位优秀的Art
+              CSSer。希望能与各位同学分享笔者的学习思路和思维方式，相信各位同学学习完本小册也能得心应手编写出一些完美的CSS效果。
+            </p>
+            <h3>小册目录</h3>
+            <ul>
+              <li>
+                <input type="checkbox" checked disabled />
+                "第01章："
+                <strong>学前准备</strong>
+                "(准备篇)"
+              </li>
+            </ul>
+            <p>
+              <img
+                height="380px"
+                width="660px"
+                src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/fd20f091b3af4050be2c0c765823062c~tplv-k3u1fbpfcp-zoom-1.image"
+                alt="玩转CSS"
+              />
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -136,14 +180,16 @@
 
 <script>
 export default {
-  name: "Book",
+  name: "BookDetail",
 };
 </script>
 
 <style lang="less" scoped>
 .book-container {
-  position: relative;
   width: 960px;
+  margin: 0 auto;
+}
+.container {
   margin: 0 auto;
 }
 a {
@@ -153,19 +199,10 @@ a {
 }
 .book-list {
   width: 100%;
-  max-width: 700px;
+  max-width: 720px;
   box-shadow: 0 1px 3px 0 rgba(4, 5, 13, 0.23);
   a {
     border-bottom: 1px solid #e6e8e8;
-  }
-}
-.book-aside {
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 240px;
-  .aside {
-    position: fixed;
   }
 }
 .item {
@@ -243,107 +280,152 @@ a {
   }
 }
 .other {
-  margin-top: 6px;
+  margin-top: 25px;
+  display: flex;
+  // align-items: center;
+  .buy {
+    border: none;
+    background-color: #007fff;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 2px;
+    outline: none;
+    padding: 0 30px;
+    &:hover {
+      background-color: #0371df;
+    }
+  }
+  .try {
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #71777c;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #aeb6c0;
+    margin-left: 5px;
+    &:hover {
+      background: #f2f4f7;
+    }
+  }
+}
+.buy-count {
+  width: 720px;
   display: flex;
   align-items: center;
-  .price {
-    color: #ed7b11;
-    font-size: 18px;
-    margin-right: 15px;
-    align-items: center;
+  box-sizing: border-box;
+  padding: 8px 22px 8px 15px;
+  border: 1px solid #ecf0f3;
+  color: #666;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.book-card {
+  margin-top: 20px;
+  width: 720px;
+  font-size: 16px;
+  box-shadow: 0 1px 3px 0 rgba(4, 5, 13, 0.23);
+}
+.book-menu-wrap {
+  display: flex;
+  height: 50px;
+  line-height: 50px;
+  border: 1px solid #f2f4f7;
+  div {
+    padding: 0 20px;
+    cursor: pointer;
+    &:hover {
+      color: #007fff;
+    }
   }
-  .message {
-    opacity: 0.6;
-    color: #71777c;
-    font-size: 13px;
-    .point {
-      text-align: center;
-      &::after {
-        display: inline-block;
-        content: ".";
-        color: #71777c;
-        margin-left: 5px;
-        margin-right: 5px;
+  div.active {
+    color: #007fff;
+    border-bottom: 2px solid #007fff;
+  }
+}
+.book-con {
+  padding: 30px 30px 0;
+}
+.con-header {
+  margin: 0 0 20px;
+  padding: 0 0 12px;
+  font-size: 24px;
+  font-weight: 700;
+  border-bottom: 1px solid #ececec;
+}
+.con-info {
+  .info {
+    min-height: 70px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    // justify-content: flex-start;
+    padding-left: 20px;
+    padding-right: 35px;
+    &:hover {
+      background: #dbdee0;
+    }
+  }
+  .step {
+    position: relative;
+    margin-right: 15px;
+    // align-self: stretch;
+    &::after {
+      z-index: 0;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      background-color: #b5b7ba;
+      height: 50%;
+      content: "";
+    }
+  }
+  .round {
+    border: 2px solid #b5b7ba;
+    color: #b5b7ba;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    border-width: 3px;
+    border-radius: 50%;
+    z-index: 10;
+    font-size: 18px;
+  }
+  .center {
+    .title {
+      font-size: 16px;
+    }
+    .sub-line {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      .try-read {
+        width: 40px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        background: #fa5600;
+        color: #fff;
+        border-radius: 2px;
+        margin-right: 10px;
+      }
+      .statistics {
+        color: #b2bac2;
+        span {
+          margin-right: 10px;
+        }
       }
     }
   }
 }
-.book-aside .aside {
-  border-bottom: 1px solid #e6e8e8;
-  .notice {
-    overflow: hidden;
-    border-radius: 2px;
-    box-shadow: 0 1px 3px 0 rgba(4, 5, 13, 0.23);
-    background-color: #fff;
-    margin-bottom: 10px;
-    .notice-content {
-      padding: 15px 16px;
-      display: flex;
-      align-items: center;
-      img {
-        height: 32px;
-      }
-      span {
-        font-size: 16px;
-        margin-left: 10px;
-        font-weight: 500;
-        color: #000;
-      }
-    }
-  }
-  .section {
-    width: 240px;
-    overflow: hidden;
-    border-radius: 2px;
-    box-shadow: 0 1px 3px 0 rgba(4, 5, 13, 0.23);
-    background-color: #fff;
-    .section-introduce {
-      padding: 15px 16px;
-      .title {
-        font-size: 15px;
-      }
-      .desc {
-        margin-top: 8px;
-        font-size: 14px;
-        color: #646464;
-      }
-    }
-    .wechat {
-      padding: 12px 16px;
-      .title {
-        font-size: 15px;
-      }
-      .wechat-qr {
-        font-size: 14px;
-        margin-top: 9px;
-        height: 95px;
-        background: url(//sf6-scmcdn2-tos.pstatp.com/xitu_juejin_web/img/wechat-qr.f1926e7.png)
-          no-repeat center 0;
-        background-size: contain;
-        border-radius: 2px;
-      }
-    }
-  }
-  .section-help {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 240px;
-    margin-top: 10px;
-    border-radius: 2px;
-    box-shadow: 0 1px 3px 0 rgba(4, 5, 13, 0.23);
-    a {
-      height: 90px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      color: #71777b;
-      flex-grow: 1;
-      img {
-        height: 18px;
-      }
-    }
-  }
+.section {
+  padding: 1px 30px 30px;
 }
 </style>

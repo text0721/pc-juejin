@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Book from "./pages/book";
+import Book from "./pages/Book";
 export default {
   name: "App",
   components: {

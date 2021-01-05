@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import Book from "../book";
+import Book from "../Book";
 export default {
   name: "",
   components: {
