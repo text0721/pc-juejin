@@ -18,19 +18,19 @@
               >热门活动</el-menu-item
             >
             <el-menu-item
-              :index="index"
               v-for="(item, index) in activeNavList"
               :key="item.id"
+              :index="index + '-'"
               v-show="index < 6"
               @click="changeNav(index)"
               >{{ item.city }}</el-menu-item
             >
-            <el-submenu>
-              <template slot="title" :index="7" @click="changeNav(index)"
+            <el-submenu index="6">
+              <template slot="title" @click="changeNav(index)"
                 >其他<i class="iconfont icon-xiangshang"></i
               ></template>
               <el-menu-item
-                :index="'7' + '-' + 'index'"
+                :index="'6' + '-' + 'index'"
                 v-for="(item, index) in activeNavList"
                 :key="item.id"
                 v-show="index > 5"

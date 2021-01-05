@@ -5,7 +5,7 @@
       :key="active.data.imgUrl"
       class="activeContainer"
     >
-      <img :src="active.data.imgUrl" alt="" />
+      <img v-lazy="active.data.imgUrl" alt="" />
       <div class="item">
         <p class="title">{{ active.data.title }}</p>
         <div class="data">

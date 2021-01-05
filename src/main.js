@@ -10,6 +10,8 @@ import "./plugins/element";
 // 引入公共资源
 import "./styles/reset.css";
 
+import "./plugins/lazyload";
+
 Vue.config.productionTip = false;
 
 new Vue({
