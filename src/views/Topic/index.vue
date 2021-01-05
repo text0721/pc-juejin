@@ -65,8 +65,144 @@
             <li class="goosip-item">
               <div class="goosip">
                 <div class="goosip-header-row">
-                  <div class="account group">酥饼</div>
-                  <div class="header-action">关注</div>
+                  <div class="account-group">
+                    <div class="user-popover-box">
+                      <a href="#"
+                        ><img src="../../static/images/x1.jpg" alt=""
+                      /></a>
+                    </div>
+                    <div class="goosip-header-content">
+                      <div class="user-popover-box">
+                        <a href="#">酥饼i</a>
+                      </div>
+                      <div class="meta-box">
+                        <span>前端@大屁股</span>
+                        <span>·</span>
+                        <span class="time">1秒前</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header-action">
+                    <button><span>关注</span></button>
+                  </div>
+                </div>
+                <div class="goosip-content-row">
+                  <div class="content-box">
+                    <span>哈哈哈！大屁股！</span>
+                  </div>
+                </div>
+                <div class="goosip-image-row">
+                  <div class="image-box">
+                    <div class="image">
+                      <img src="../../static/images/Zoro1.jpeg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="goosip-topic-row">
+                  <a href="#" title="来分享下你上班看到的好东西吧~">上班摸鱼</a>
+                </div>
+                <div class="goosip-action-row">
+                  <div class="action-box">
+                    <div class="like-action action">
+                      <div class="action-title-box">
+                        <span class="iconfont icon-dianzan"></span>
+                        <span class="action-title">1</span>
+                      </div>
+                    </div>
+                    <div class="comment-action action">
+                      <span class="iconfont icon-pinglun"></span>
+                      <span class="action-title">评论</span>
+                    </div>
+                    <div class="share-action action">
+                      <span class="iconfont icon-fenxiang"></span>
+                      <span class="action-title">&nbsp;分享</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="goosip-item">
+              <div class="goosip">
+                <div class="goosip-header-row">
+                  <div class="account-group">
+                    <div class="user-popover-box">
+                      <a href="#"
+                        ><img src="../../static/images/x1.jpg" alt=""
+                      /></a>
+                    </div>
+                    <div class="goosip-header-content">
+                      <div class="user-popover-box">
+                        <a href="#">酥饼i</a>
+                      </div>
+                      <div class="meta-box">
+                        <span>前端@大屁股</span>
+                        <span>·</span>
+                        <span class="time">1秒前</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header-action">
+                    <button><span>关注</span></button>
+                  </div>
+                </div>
+                <div class="goosip-content-row">
+                  <div class="content-box">
+                    <span>哈哈哈！大屁股！</span>
+                  </div>
+                </div>
+                <div class="goosip-image-row">
+                  <div class="image-box">
+                    <div class="image">
+                      <img src="../../static/images/Zoro1.jpeg" alt="" />
+                    </div>
+                  </div>
+                </div>
+                <div class="goosip-topic-row">
+                  <a href="#" title="来分享下你上班看到的好东西吧~">上班摸鱼</a>
+                </div>
+                <div class="goosip-action-row">
+                  <div class="action-box">
+                    <div class="like-action action">
+                      <div class="action-title-box">
+                        <span class="iconfont icon-dianzan"></span>
+                        <span class="action-title">1</span>
+                      </div>
+                    </div>
+                    <div class="comment-action action">
+                      <span class="iconfont icon-pinglun"></span>
+                      <span class="action-title">评论</span>
+                    </div>
+                    <div class="share-action action">
+                      <span class="iconfont icon-fenxiang"></span>
+                      <span class="action-title">&nbsp;分享</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="goosip-item">
+              <div class="goosip">
+                <div class="goosip-header-row">
+                  <div class="account-group">
+                    <div class="user-popover-box">
+                      <a href="#"
+                        ><img src="../../static/images/x1.jpg" alt=""
+                      /></a>
+                    </div>
+                    <div class="goosip-header-content">
+                      <div class="user-popover-box">
+                        <a href="#">酥饼i</a>
+                      </div>
+                      <div class="meta-box">
+                        <span>前端@大屁股</span>
+                        <span>·</span>
+                        <span class="time">1秒前</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="header-action">
+                    <button><span>关注</span></button>
+                  </div>
                 </div>
                 <div class="goosip-content-row">
                   <div class="content-box">
@@ -108,7 +244,89 @@
       </div>
     </div>
     <!-- 最右 -->
-    <div class="Topic-right"></div>
+    <div class="Topic-right">
+      <!-- 个人 -->
+      <div class="user-name">
+        <div class="name">
+          <a href="#">
+            <img src="../../static/images/x3.jpg" alt="" />
+          </a>
+          <div class="user-info">
+            <a href="#">酥饼ii</a>
+          </div>
+        </div>
+        <ul class="user-list">
+          <a href="#" class="user-item">
+            <div class="title">沸点</div>
+            <div class="count">199</div>
+          </a>
+          <a href="#" class="user-item">
+            <div class="title">关注</div>
+            <div class="count">1</div>
+          </a>
+          <a href="#" class="user-item active">
+            <div class="title">关注者</div>
+            <div class="count">10.5k</div>
+          </a>
+        </ul>
+      </div>
+      <!-- 精选 -->
+      <div class="good-topic">
+        <header>精选沸点</header>
+        <ul class="gossip-list">
+          <li class="gossip-item">
+            <a
+              href="#"
+              title="阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴"
+            >
+              <div class="content-box">
+                <div class="content">
+                  "
+                  阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴
+                  阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴
+                  "
+                </div>
+                <div class="item" style="margin-top: 4px">
+                  <span>6 赞 ·</span>
+                  <span> 44 评论</span>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="gossip-item">
+            <a
+              href="#"
+              title="阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴"
+            >
+              <div class="content-box">
+                <div class="content">
+                  "
+                  阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴
+                  阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴阿巴
+                  "
+                </div>
+                <div class="item" style="margin-top: 4px">
+                  <span>6 赞 ·</span>
+                  <span> 44 评论</span>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- 玩转link -->
+      <a class="play-link">
+        <img src="../../static/images/x20.jpg" alt="" />
+        <span>如何玩转屁股</span>
+      </a>
+      <!-- 悬浮，后面开起来 -->
+      <!-- <div class="play-link-show">
+        <a class="play-link">
+          <img src="../../static/images/x20.jpg" alt="" />
+          <span>如何玩转屁股</span>
+        </a>
+      </div> -->
+    </div>
   </div>
 </template>
 
@@ -268,6 +486,59 @@ a {
   justify-content: space-between;
   padding: 16px 2rem 0 20px;
 }
+.gossip-list .goosip .goosip-header-row .header-action {
+  /* display: flex; */
+}
+.gossip-list .goosip .goosip-header-row .header-action button {
+  margin: 0 0 0 auto;
+  padding: 0;
+  width: 55px;
+  height: 26px;
+  font-size: 13px;
+  border: 1px solid #37c700;
+  background: none;
+  color: #6cbd45;
+}
+.gossip-list .goosip .goosip-header-row .account-group {
+  align-items: center;
+  display: flex;
+  width: 200px;
+}
+.gossip-list .goosip .goosip-header-row .user-popover-box {
+  display: inline;
+}
+.gossip-list .goosip .goosip-header-row .user-popover-box a {
+  font-size: 0;
+}
+.gossip-list .goosip .goosip-header-row .user-popover-box a img {
+  flex: 0 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.gossip-list .goosip .goosip-header-row .goosip-header-content {
+  display: inline;
+  margin-left: 10px;
+}
+.gossip-list
+  .goosip
+  .goosip-header-row
+  .goosip-header-content
+  .user-popover-box
+  a {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2e3135;
+}
+.gossip-list .goosip .goosip-header-row .meta-box {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  color: #8a9aa9;
+  cursor: default;
+  margin: 0.3rem 0 0;
+}
+
 .gossip-list .goosip .goosip-content-row {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -276,10 +547,8 @@ a {
 }
 .gossip-list .goosip .goosip-content-row .content-box {
   font-size: 15px;
-  line-height: 1.6;
   color: #17181a;
   overflow: hidden;
-  white-space: pre-line;
 }
 .gossip-list .goosip .goosip-image-row {
   margin-top: 0.333rem;
@@ -341,11 +610,152 @@ a {
   padding: 0 12px;
   border: 1px solid #007fff;
   border-radius: 14px;
-  color: #007fff;
   -webkit-user-select: none;
   user-select: none;
   text-decoration: none;
   cursor: pointer;
-  color: #909090;
+  /* color: #909090; */
+  color: #007fff;
+}
+/* 最右 */
+.Topic-right {
+  width: 248px;
+  flex: 1;
+  max-width: 248px;
+  margin-left: 10px;
+}
+/* 玩转 */
+.Topic-right .play-link {
+  height: 50px;
+  width: 228px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: #fff;
+  color: #2e3135;
+  font-size: 15px;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  text-decoration: none;
+}
+.Topic-right .play-link img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+/* 个人 */
+.Topic-right .user-name {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 0.2rem;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+.Topic-right .user-name .name {
+  display: flex;
+  padding: 16px;
+  height: 65px;
+  max-height: 92px;
+  border-bottom: 1px solid rgba(92, 96, 102, 0.1);
+}
+.Topic-right .user-name .name a img {
+  flex: 0 0 auto;
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+}
+.Topic-right .user-name .name .user-info {
+  position: relative;
+  margin: 1rem 0;
+  right: 100px;
+}
+.Topic-right .user-name .name .user-info a {
+  display: flex;
+  width: 40px;
+  color: #17181a;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.Topic-right .user-name .user-list {
+  display: flex;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  padding: 16.5px 0;
+}
+.Topic-right .user-name .user-list a {
+  border-right: 1px solid rgba(92, 96, 102, 0.1);
+}
+.Topic-right .user-name .user-list a .title {
+  font-size: 13px;
+  color: #8a9aa9;
+  margin-bottom: 2px;
+}
+.Topic-right .user-name .user-list a .count {
+  font-size: 14px;
+  font-weight: 600;
+  color: hotpink;
+}
+.Topic-right .user-name .user-list .active {
+  border: none;
+}
+/* 精选 */
+.Topic-right .good-topic {
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+.Topic-right .good-topic header {
+  color: #2e3135;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 13px 16px;
+  border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
+}
+.Topic-right .good-topic .gossip-list {
+  padding: 0 16px;
+  margin: 0;
+  background: #fff;
+}
+.Topic-right .good-topic .gossip-item {
+  border-bottom: 1px solid hsla(0, 0%, 59.2%, 0.1);
+  padding: 12px 0;
+  list-style: none;
+}
+.Topic-right .good-topic .gossip-item a {
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.Topic-right .good-topic .gossip-item .content-box {
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+}
+.Topic-right .good-topic .gossip-item .content {
+  color: #2e3135;
+  font-size: 13px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  max-height: 50px;
+}
+.Topic-right .good-topic .gossip-item .item {
+  color: #76797e;
+  font-size: 13px;
+}
+.Topic-right .play-link-show {
+  opacity: 1;
+  z-index: 5;
+  /* pointer-events: all; */
+  position: fixed;
+      top: 50px;
+
 }
 </style>
