@@ -1,19 +1,27 @@
 <template>
-  <div id="app">APP</div>
+  <div id="app">
+    <Active />
+  </div>
 </template>
 
 <script>
-import axios from "axios";
+import Active from "./pages/active/active";
 export default {
   name: "app",
-  async mounted() {
-    const a = await axios({
-      baseURL: `/api/getindexCateList`,
-    });
-    console.log(a.data.data);
+  components: {
+    Active,
   },
 };
 </script>
 
-<style>
+
+<style lang="less" scoped>
+html,
+body {
+  width: 100%;
+}
+#app {
+  width: 100%;
+  min-width: 960px;
+}
 </style>

@@ -7,12 +7,20 @@ const router = new KoaRouter();
 
 app.use(router.routes()).use(router.allowedMethods());
 
-//用于返回首页catelist数据
-let indexCateListData = require("./datas/indexCateList.json");
-router.get("/api/getindexCateList", function(ctx, next) {
+//用于返回active活动数据
+let ActiveItem = require("./datas/activeItem.json");
+router.get("/getactiveitem", function(ctx, next) {
   ctx.body = {
     code: 200,
-    data: indexCateListData,
+    data: ActiveItem,
+  };
+});
+//用于返回active活动导航数据
+let ActiveNav = require("./datas/activeNav.json");
+router.get("/getactivenav", function(ctx, next) {
+  ctx.body = {
+    code: 200,
+    data: ActiveNav,
   };
 });
 

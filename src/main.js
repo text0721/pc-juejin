@@ -13,6 +13,10 @@ import "./styles/reset.css";
 Vue.config.productionTip = false;
 
 new Vue({
+  beforeCreate() {
+    // 绑定全局事件总线对象
+    Vue.prototype.$bus = this; //方式2，常用
+  },
   render: (h) => h(App),
   router,
   store,
