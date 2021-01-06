@@ -3,6 +3,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import Home from "../pages/home.vue";
+import Active from "../pages/active/active.vue";
 
 // 重写push和replace方法
 // 目的：为了让编程式导航重复点击时不报错~
@@ -36,6 +37,10 @@ export default new VueRouter({
     {
       path: "/",
       component: Home,
+    },
+    {
+      path: "/active",
+      component: Active,
     },
   ],
   // 每次切换路由页面滚动条位置

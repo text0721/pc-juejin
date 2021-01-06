@@ -93,6 +93,7 @@ export default {
     // window.addEventListener("scroll", this.handScroll);
     //调整添加窗口大小事件
     window.addEventListener("resize", this.handleResize);
+    this.handleResize();
   },
 
   methods: {
@@ -120,20 +121,19 @@ export default {
     },
     //窗口调整大小事件，做响应式
     handleResize() {
-      const screenWidth =
-        document.documentElement.clientWidth || document.body.clientWidth;
+      // let screenWidth =
+      //   document.documentElement.clientWidth || document.body.clientWidth;
+      let screenWidth = window.innerWidth;
 
-      if (screenWidth < 460) {
-        this.screenWidth = 460;
-        // return;
-      } else if (screenWidth > 950) {
+      if (screenWidth > 960) {
         this.screenWidth = 960;
         // return;
       } else {
         this.screenWidth = screenWidth;
         // return;
       }
-      console.log(this.screenWidth);
+      // console.log("记录视图宽", this.screenWidth);
+      console.log("实际窗口宽", screenWidth);
     },
   },
   beforeDestroy: function () {
@@ -285,6 +285,7 @@ export default {
           //日历body
           /deep/.el-calendar__body {
             padding: 0 1px;
+            padding-left: 0;
             width: 100%;
             /deep/.el-calendar-table {
               /deep/thead {
@@ -343,18 +344,10 @@ export default {
 
     .main-item {
       width: 100%;
-      // max-width: 960px;
-      // margin-top: 35px;
-      // display: flex;
-      // flex-wrap: wrap;
-      // align-items: stretch;
-      // margin-left: -7px;
-      // margin-right: -7px;
-      // justify-content: space-between;
     }
   }
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 960px) {
   .active {
     //右侧的活动隐藏
     .bodyContainer {

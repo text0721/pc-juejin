@@ -1,10 +1,12 @@
 <template>
   <div class="activeItem">
-    <div
+    <router-link
+      to="/active"
       v-for="active in activeList"
-      :key="active.data.imgUrl"
+      :key="active.data.title"
       class="activeContainer"
     >
+      <!-- <div> -->
       <img v-lazy="active.data.imgUrl" alt="" />
       <div class="item">
         <p class="title">{{ active.data.title }}</p>
@@ -18,7 +20,7 @@
           <div>报名参加</div>
         </div>
       </div>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -78,31 +80,37 @@ export default {
   flex-shrink: 0;
   // 不允许换行
   flex-wrap: wrap;
-  justify-content:space-between;
+  // justify-content: space-between;
   width: 100%;
-  // box-sizing: border-box;
   position: relative;
   .activeContainer:hover {
-    transform: translateY(-5px);
+    text-decoration: none;
+    transform: translateY(-3px);
     transition: transform 400ms;
+    box-shadow: 2px 5px 5px rgb(228, 219, 219); //底部阴影
+    .item {
+      box-shadow: none;
+    }
   }
   .activeContainer {
-    // margin-right: 10px;
+    display: inline-block;
+    margin-right: 13px;
     width: 25%;
-    // display: inline-block;
     margin-bottom: 30px;
     transition: transform 400ms;
     width: 230px;
-    box-shadow: 0 2px 10px -1px rgb(158, 152, 152); //底部阴影
+
     img {
+      border-radius: 2px;
       display: block;
-      // width: 230px;
-      width: 100%;
+      width: 230px;
+      // width: 100%;
       height: 135px;
     }
     .item {
       background-color: white;
       padding: 15px 10px;
+      box-shadow: 1px 1px 1px rgb(207, 198, 198); //底部阴影
       .title {
         display: -webkit-box;
         overflow: hidden;
@@ -152,33 +160,58 @@ export default {
       }
     }
   }
+  .activeContainer:nth-child(4n) {
+    margin-right: 0;
+  }
 }
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 960px) {
   .activeItem {
     .activeContainer {
-      width: 33%;
+      width: 32%;
       img {
         width: 100%;
+        height: auto;
       }
+    }
+    .activeContainer:nth-child(3n) {
+      margin-right: 0;
+    }
+    .activeContainer:nth-child(4n) {
+      margin-right: 13px;
+    }
+    .activeContainer:nth-child(12n) {
+      margin-right: 0px;
     }
   }
 }
 @media screen and (max-width: 720px) {
   .activeItem {
     .activeContainer {
-      width: 50%;
+      width: 48%;
       img {
         width: 100%;
+        height: auto;
       }
+    }
+    .activeContainer:nth-child(2n) {
+      margin-right: 0;
+    }
+    .activeContainer:nth-child(3n) {
+      margin-right: 13px;
+    }
+    .activeContainer:nth-child(6n) {
+      margin-right: 0;
     }
   }
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
   .activeItem {
     .activeContainer {
       width: 100%;
+      margin-right: 0;
       img {
         width: 100%;
+        height: auto;
       }
     }
   }
