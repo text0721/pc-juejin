@@ -73,18 +73,31 @@ export default {
 
 <style lang='less' scoped>
 .activeItem {
+  display: flex;
+  // 不允许压缩
+  flex-shrink: 0;
+  // 不允许换行
+  flex-wrap: wrap;
+  justify-content:space-between;
+  width: 100%;
+  // box-sizing: border-box;
+  position: relative;
   .activeContainer:hover {
     transform: translateY(-5px);
     transition: transform 400ms;
   }
   .activeContainer {
+    // margin-right: 10px;
+    width: 25%;
+    // display: inline-block;
+    margin-bottom: 30px;
     transition: transform 400ms;
     width: 230px;
-    margin: 30px 0 0 0;
     box-shadow: 0 2px 10px -1px rgb(158, 152, 152); //底部阴影
     img {
       display: block;
-      width: 230px;
+      // width: 230px;
+      width: 100%;
       height: 135px;
     }
     .item {
@@ -136,6 +149,36 @@ export default {
         line-height: 25px;
         color: #fff;
         text-align: center;
+      }
+    }
+  }
+}
+@media screen and (max-width: 950px) {
+  .activeItem {
+    .activeContainer {
+      width: 33%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .activeItem {
+    .activeContainer {
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 460px) {
+  .activeItem {
+    .activeContainer {
+      width: 100%;
+      img {
+        width: 100%;
       }
     }
   }
