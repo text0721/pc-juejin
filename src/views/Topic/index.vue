@@ -5,11 +5,11 @@
       <nav class="navigation">
         <ul class="nav-list">
           <li
-            :class="{ active: !index }"
+            @click="active(index)"
+            :class="{ active: index === currentIndex }"
             class="nav-item"
             v-for="(item, index) in this.getData.TopicLeft"
             :key="index"
-            @click="active"
           >
             <a title="推荐" @click="goLink">{{ item.Title }}</a>
           </li>
@@ -228,6 +228,7 @@ export default {
       task: "", //评论内容
       imgUrl: "", //评论图片地址
       save: "", //分类
+      currentIndex: 0,
     };
   },
 
@@ -243,24 +244,13 @@ export default {
     getProduct() {
       console.log(222);
     },
-    active($event) {
-      console.log($event.currentTarget.parentNode.children);
-      // $event.currentTarget.parentNode.children.classList.remove(
-      //   "nav-item active"
-      // );
-      $event.currentTarget.className = "nav-item active";
+    active(index) {
+      this.currentIndex = index;
     },
+
     scrollEvent() {
-      // scrollHeight（文档内容实际高度，包括超出视窗的溢出部分）、
-      // scrollTop（滚动条滚动距离）、
-      // clientHeight（窗口可视范围高度）。
-      // const clientHeight =
-      // document.documentElement.clientHeight || document.body.clientHeight;
-      // 设备屏幕高度
       const scrollTop = window.pageYOffset; // div 到头部的距离
-      // const scrollHeight = document.body.scrollHeight; // 滚动条的总高度
-      // + clientHeight == scrollHeight
-      //滚动条到底部的条件
+
       if (scrollTop > 500) {
         // div 到头部的距离 + 屏幕高度 = 可滚动的总高度
         document.getElementById("scroll").style.display = "none";
