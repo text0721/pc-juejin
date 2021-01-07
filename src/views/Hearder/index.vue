@@ -1,15 +1,17 @@
 <template>
-  <div>Hearder</div>
+  <div class="Header">Header</div>
 </template>
 
 <script>
 export default {
-  name: "Hearder",
-  components:{
-    
-  }
+  name: "Header",
 };
+
 </script>
 
-<style lang='less' scoped>
+<style >
+.Header {
+  font-size: 20px;
+}
+
 </style>
