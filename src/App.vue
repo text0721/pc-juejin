@@ -1,21 +1,32 @@
 <template>
   <div id="app">
-    <Header />
-    <HeaderList />
-    <HomeContent />
+    <Home />
+    <router-view></router-view>
+    <div class="login-container">
+      <Login v-show="isLogin" />
+    </div>
   </div>
 </template>
 
 <script>
-import Header from "./components/Header";
-import HeaderList from "./components/HeaderList";
-import HomeContent from "./pages/HomeContent";
+import Home from "./pages/home";
+import Login from "./components/Login";
+
 export default {
   name: "app",
+  data() {
+    return {
+      isLogin: false,
+    };
+  },
+  mounted() {
+    this.$bus.$on("showLogin", () => {
+      this.isLogin = !this.isLogin;
+    });
+  },
   components: {
-    Header,
-    HeaderList,
-    HomeContent,
+    Home,
+    Login,
   },
 };
 </script>

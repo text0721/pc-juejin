@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <div class="header-container">
+    <div class="header-container" ref="header">
       <div class="header-logo">
         <img
           src="https://sf6-scmcdn2-tos.pstatp.com/xitu_juejin_web/img/logo.a7995ad.svg"
@@ -8,10 +8,19 @@
         />
       </div>
       <ul class="header-list">
-        <li><a href="">首页</a></li>
-        <li><a href="">沸点</a></li>
-        <li><a href="">小册</a></li>
-        <li><a href="">活动</a></li>
+        <!-- <li class="active"></li> -->
+        <li :class="{ active: changActive === 1 }" @click="changeActive(1)">
+          <router-link to="/">首页</router-link>
+        </li>
+        <li :class="{ active: changActive === 2 }" @click="changeActive(2)">
+          <router-link to="">沸点</router-link>
+        </li>
+        <li :class="{ active: changActive === 3 }" @click="changeActive(3)">
+          <router-link to="/book">小册</router-link>
+        </li>
+        <li :class="{ active: changActive === 4 }" @click="changeActive(4)">
+          <router-link to="">活动</router-link>
+        </li>
       </ul>
       <div class="header-content">
         <div class="header-search">
@@ -28,41 +37,78 @@
         </div>
       </div>
     </div>
-    <Login v-show="isLogin" />
+    <!-- <Login v-show="isLogin" :isLogin.sync="isLogin" ref="login" /> -->
   </div>
 </template>
 
 <script>
-import Login from "../Login";
+// import Login from "../Login";
 export default {
   name: "Header",
   data() {
     return {
       isLogin: false,
+      changActive: 1,
     };
   },
   methods: {
+    //系统滚动条事件隐藏头部
+    handScroll() {
+      const screenHeight =
+        document.documentElement.clientHeight || document.body.clientHeight;
+      const half = screenHeight / 2;
+      //如果滚动条的距离=屏幕高度就隐藏
+      if (window.scrollY > half) {
+        this.$refs.header.style.height = 0;
+        // this.$refs.header.style.height = 0;
+        this.$refs.header.style.transitionProperty = "height";
+        this.$refs.header.style.transitionDuration = 0.2 + "s";
+        this.$refs.header.style.transitionTiming = "linear";
+        this.$refs.header.style.overflow = "hidden";
+      } else {
+        this.$refs.header.style.height = 61 + "px";
+      }
+    },
     handleLogin() {
-      console.log(this);
-      this.isLogin = true;
+      this.$bus.$emit("showLogin");
+    },
+    changeActive(num) {
+      console.log(num);
+      this.changActive = num;
     },
   },
+  mounted() {
+    //添加系统滚动条事件
+    window.addEventListener("scroll", this.handScroll);
+  },
+  beforeDestroy: function () {
+    window.removeEventListener("scroll", this.handScroll);
+  },
+  // methods: {
+  //   handleLogin() {
+  //     // console.log(this);
+  //     this.$refs.login.$emit("tiggle");
+  //     this.isLogin = !this.isLogin;
+  //   },
+  // },
   components: {
-    Login,
+    // Login,
   },
 };
 </script>
 
 <style lang="less" scoped>
 .header {
-  border-bottom: 1px solid #f1f1f1;
+  background-color: #fff;
+  width: 960px;
 }
 .header-container {
-  height: 60px;
+  height: 61px;
   display: flex;
   width: 960px;
   margin: 0 auto;
   align-items: center;
+  // border-bottom: 1px solid #f1f1f1;
 }
 .header-logo {
   margin-right: 24px;
@@ -76,6 +122,12 @@ export default {
     cursor: pointer;
     a {
       text-decoration: none;
+    }
+    &.active a {
+      color: #007fff;
+    }
+    &:hover a {
+      color: #007fff;
     }
   }
 }
