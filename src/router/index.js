@@ -2,13 +2,15 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import Home from "../pages/HomeContent";
+import HomeContent from "../pages/HomeContent";
 
 // const Book = () => import(/* webpackChunkName: "Book" */ "../pages/Book");
 import Book from "../pages/book/index.vue";
 import BookDetail from "../pages/BookDetail";
 import Payment from "../pages/Payment";
 import Topay from "../pages/Topay";
+import Home from "../pages/home.vue";
+import Topic from "../pages/Topic";
 
 // 重写push和replace方法
 // 目的：为了让编程式导航重复点击时不报错~
@@ -37,7 +39,6 @@ VueRouter.prototype.replace = function(location, onComplete, onAbort) {
 Vue.use(VueRouter);
 
 export default new VueRouter({
-  // 路由配置
   routes: [
     {
       path: "/",
@@ -45,43 +46,47 @@ export default new VueRouter({
     },
     {
       path: "/following",
-      component: Home,
+      component: HomeContent,
     },
     {
       path: "/recommend",
-      component: Home,
+      component: HomeContent,
     },
     {
       path: "/backend",
-      component: Home,
+      component: HomeContent,
     },
     {
       path: "/frontend",
-      component: Home,
+      component: HomeContent,
     },
     {
       path: "/android",
-      component: Home,
+      component: HomeContent,
     },
     {
       path: "/ios",
-      component: Home,
+      component: HomeContent,
     },
     {
       path: "/ai",
-      component: Home,
+      component: HomeContent,
     },
     {
       path: "/freebie",
-      component: Home,
+      component: HomeContent,
     },
     {
       path: "/career",
-      component: Home,
+      component: HomeContent,
     },
     {
       path: "/acticle",
-      component: Home,
+      component: HomeContent,
+    },
+    {
+      path: "/HomeContent",
+      component: HomeContent,
     },
     {
       path: "/books",
@@ -102,8 +107,11 @@ export default new VueRouter({
       path: "/topay",
       component: Topay,
     },
+    {
+      path: "/topic",
+      component: Topic,
+    },
   ],
-  // 每次切换路由页面滚动条位置
   scrollBehavior() {
     return { x: 0, y: 0 };
   },

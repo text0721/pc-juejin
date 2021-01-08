@@ -69,6 +69,13 @@ router.get("/getBookDetailList", async function(ctx, next) {
   // console.log(bookDetail);
   ctx.body = bookDetail;
 });
+let topicData = require("./datas/data.json");
+router.get("/getData", function (ctx, next) {
+  ctx.body = {
+    code: 200,
+    data: topicData,
+  };
+});
 
 /*
     2.将服务器应用实例app运行在某个端口上,并监听该端口

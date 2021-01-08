@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <Home />
     <router-view></router-view>
     <div class="login-container">
       <Login v-show="isLogin" />
@@ -9,7 +8,6 @@
 </template>
 
 <script>
-import Home from "./pages/home";
 import Login from "./components/Login";
 
 export default {
@@ -25,14 +23,16 @@ export default {
     });
   },
   components: {
-    Home,
     Login,
   },
 };
 </script>
-
 <style>
 body {
   background-color: #f4f5f6;
+}
+
+html {
+  background-color: #f4f5f5;
 }
 </style>

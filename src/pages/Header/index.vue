@@ -8,19 +8,10 @@
         />
       </div>
       <ul class="header-list">
-        <!-- <li class="active"></li> -->
-        <li :class="{ active: changActive === 1 }" @click="changeActive(1)">
-          <router-link to="/">首页</router-link>
-        </li>
-        <li :class="{ active: changActive === 2 }" @click="changeActive(2)">
-          <router-link to="/topic">沸点</router-link>
-        </li>
-        <li :class="{ active: changActive === 3 }" @click="changeActive(3)">
-          <router-link to="/books">小册</router-link>
-        </li>
-        <li :class="{ active: changActive === 4 }" @click="changeActive(4)">
-          <router-link to="/active">活动</router-link>
-        </li>
+        <li class="active"><a href="">首页</a></li>
+        <li><a href="">沸点</a></li>
+        <li><a href="">小册</a></li>
+        <li><a href="">活动</a></li>
       </ul>
       <div class="header-content">
         <div class="header-search">
@@ -33,11 +24,11 @@
           <div class="header-write">
             <button>写文章<i class="el-icon-caret-bottom"></i></button>
           </div>
-          <button class="header-login" @click="handleLogin">登录</button>
+          <!-- <button class="header-login" @click="handleLogin">登录</button> -->
         </div>
       </div>
     </div>
-    <!-- <Login v-show="isLogin" :isLogin.sync="isLogin" ref="login" /> -->
+    <!-- <Login v-show="isLogin" :isLogin="isLogin" ref="login" /> -->
   </div>
 </template>
 
@@ -48,7 +39,6 @@ export default {
   data() {
     return {
       isLogin: false,
-      changActive: 1,
     };
   },
   methods: {
@@ -59,8 +49,9 @@ export default {
       const half = screenHeight / 2;
       //如果滚动条的距离=屏幕高度就隐藏
       if (window.scrollY > half) {
+        console.log(111);
+
         this.$refs.header.style.height = 0;
-        // this.$refs.header.style.height = 0;
         this.$refs.header.style.transitionProperty = "height";
         this.$refs.header.style.transitionDuration = 0.2 + "s";
         this.$refs.header.style.transitionTiming = "linear";
@@ -69,46 +60,37 @@ export default {
         this.$refs.header.style.height = 61 + "px";
       }
     },
-    handleLogin() {
-      this.$bus.$emit("showLogin");
-    },
-    changeActive(num) {
-      console.log(num);
-      this.changActive = num;
-    },
+    // handleLogin() {
+    // console.log(this);
+    // this.$refs.login.$emit("tiggle");
+    // this.isLogin = !this.isLogin;
+    // },
   },
   mounted() {
     //添加系统滚动条事件
     window.addEventListener("scroll", this.handScroll);
+    console.log(this.$refs.header);
   },
   beforeDestroy: function () {
     window.removeEventListener("scroll", this.handScroll);
   },
-  // methods: {
-  //   handleLogin() {
-  //     // console.log(this);
-  //     this.$refs.login.$emit("tiggle");
-  //     this.isLogin = !this.isLogin;
-  //   },
+  // components: {
+  //   Login,
   // },
-  components: {
-    // Login,
-  },
 };
 </script>
 
 <style lang="less" scoped>
 .header {
-  background-color: #fff;
-  width: 960px;
+  border-bottom: 1px solid #f1f1f1;
+  background-color: white;
 }
 .header-container {
-  height: 61px;
+  height: 60px;
   display: flex;
   width: 960px;
   margin: 0 auto;
   align-items: center;
-  // border-bottom: 1px solid #f1f1f1;
 }
 .header-logo {
   margin-right: 24px;
