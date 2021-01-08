@@ -32,7 +32,6 @@ VueRouter.prototype.replace = function(location, onComplete, onAbort) {
 Vue.use(VueRouter);
 
 export default new VueRouter({
-  // 路由配置
   routes: [
     {
       path: "/",
@@ -43,7 +42,6 @@ export default new VueRouter({
       component: Topic,
     },
   ],
-  // 每次切换路由页面滚动条位置
   scrollBehavior() {
     return { x: 0, y: 0 };
   },
