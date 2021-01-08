@@ -16,7 +16,7 @@
   /* background-color: yellow; */
   background-color: #fff;
   position: fixed;
-  /* top: 70px; */
+  top: 70px;
   width: 104px;
   transition: all 0.2s linear;
 }
@@ -62,7 +62,9 @@ a {
 }
 
 /* 中间区域 */
-
+.Topic-main{
+  margin-top: 70px;
+}
 .Topic-main .wrapper {
   padding: 15px;
   background: #fff;
@@ -210,6 +212,7 @@ a {
   font-size: 15px;
   color: #17181a;
   overflow: hidden;
+  max-width: 420px;
 }
 .gossip-list .goosip .goosip-image-row {
   margin-top: 0.333rem;
@@ -286,6 +289,7 @@ a {
   flex: 1;
   max-width: 248px;
   margin-left: 10px;
+  margin-top: 70px;
 }
 
 /* 玩转 */

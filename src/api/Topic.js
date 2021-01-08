@@ -16,3 +16,10 @@ export let putData = function() {
     });
   }
 };
+// let topicData = require("./datas/data.json");
+// router.get("/getData", function(ctx, next) {
+//   ctx.body = {
+//     code: 200,
+//     data: topicData,
+//   };
+// });
