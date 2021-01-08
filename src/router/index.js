@@ -40,6 +40,7 @@ export default new VueRouter({
     },
     {
       path: "/active",
+      name: "active",
       component: Active,
     },
   ],

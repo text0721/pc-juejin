@@ -55,10 +55,15 @@
         <!--内容区的图片、日历部分 -->
         <div class="main-head">
           <div class="bkImg"></div>
+
           <el-calendar v-model="value" class="calendar" :first-day-of-week="7">
             <template slot="dateCell" slot-scope="{ data }">
               <!-- <div :data-time="week">111</div> -->
-              <div @mouseenter="showMessage(data.day)" @mouseleave="day = ''">
+              <div
+                @mouseenter="showMessage(data.day)"
+                @mouseleave="day = ''"
+                class="setActive"
+              >
                 <p class="calendar-day" v-if="data.day.substr(-2) < 10">
                   {{ data.day.substr(-1) }}
                 </p>
@@ -74,15 +79,19 @@
                   ></span>
                 </div>
                 <!-- 鼠标移入提示的title -->
-                <ul
-                  class="message"
-                  v-show="
-                    data.day.split('-').splice(1, 2).join('-') === day &&
-                    showObj[day]
-                  "
-                >
-                  <li v-for="msg in showObj[day]" :key="msg">-{{ msg }}</li>
-                </ul>
+                <div>
+                  <ul
+                    class="message"
+                    v-show="
+                      data.day.split('-').splice(1, 2).join('-') === day &&
+                      showObj[day]
+                    "
+                  >
+                    <li v-for="msg in showObj[day]" :key="msg">
+                      <a href="">-{{ msg }}</a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </template>
           </el-calendar>
@@ -134,7 +143,7 @@ export default {
           }
         });
         this.showObj = obj;
-        console.log(obj);
+        // console.log(obj);
       });
     });
   },
@@ -204,7 +213,6 @@ export default {
     showMessage(days) {
       //格式化hover传下来的日期为月日格式
       let day = days.split("-").splice(1, 2).join("-");
-      console.log("day", day);
       this.day = day;
     },
     //获取接受到的message
@@ -321,6 +329,22 @@ export default {
       .main-head {
         display: flex;
         margin-bottom: 35px;
+        //轮播图部分
+        /deep/.el-carousel__item h3 {
+          color: #475669;
+          font-size: 14px;
+          opacity: 0.75;
+          line-height: 150px;
+          margin: 0;
+        }
+
+        /deep/.el-carousel__item:nth-child(2n) {
+          background-color: #99a9bf;
+        }
+
+        /deep/.el-carousel__item:nth-child(2n + 1) {
+          background-color: #d3dce6;
+        }
         .bkImg {
           background-image: url(./images/head.jpg);
           background-size: cover;
@@ -427,6 +451,11 @@ export default {
                   position: relative;
                   width: 64px;
                   height: 36px;
+                  .setActive:hover {
+                    .remarks {
+                      background-color: #007fff;
+                    }
+                  }
 
                   //备注日程部分
                   p {
@@ -466,9 +495,9 @@ export default {
 
                 /deep/.el-calendar-day:hover {
                   background: none;
-                  .remarks {
-                    background-color: #007fff;
-                  }
+                  // .remarks {
+                  //   background-color: #007fff;
+                  // }
                   //展示的标题部分
                   .message {
                     list-style-type: disc;
@@ -491,6 +520,11 @@ export default {
                       white-space: nowrap;
                       overflow: hidden;
                       text-overflow: ellipsis;
+                      a {
+                        color: #007fff;
+                        text-decoration: none;
+                        cursor: pointer;
+                      }
                     }
                   }
                 }

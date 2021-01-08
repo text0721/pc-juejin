@@ -1,16 +1,11 @@
 <template>
-  <div id="app">
-    <Active />
-  </div>
+  <div id="app"></div>
 </template>
 
 <script>
-import Active from "./pages/active/active";
 export default {
   name: "app",
-  components: {
-    Active,
-  },
+  components: {},
 };
 </script>
 
