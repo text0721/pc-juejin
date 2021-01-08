@@ -1,11 +1,33 @@
 <template>
-  <div id="app">APP</div>
+  <div id="app">
+    <Home />
+    <router-view></router-view>
+    <div class="login-container">
+      <Login v-show="isLogin" />
+    </div>
+  </div>
 </template>
 
 <script>
+import Home from "./pages/home";
+import Login from "./components/Login";
+
 export default {
   name: "app",
-  async mounted() {},
+  data() {
+    return {
+      isLogin: false,
+    };
+  },
+  mounted() {
+    this.$bus.$on("showLogin", () => {
+      this.isLogin = !this.isLogin;
+    });
+  },
+  components: {
+    Home,
+    Login,
+  },
 };
 </script>
 
