@@ -3,20 +3,20 @@
     <router-link
       to="/active"
       v-for="active in activeList"
-      :key="active.data.title"
+      :key="active.title"
       class="activeContainer"
     >
       <!-- <div> -->
-      <img v-lazy="active.data.imgUrl" alt="" />
+      <img v-lazy="active.imgUrl" alt="" />
       <div class="item">
-        <p class="title">{{ active.data.title }}</p>
+        <p class="title">{{ active.title }}</p>
         <div class="data">
           <span class="time iconfont icon-rili"></span>
-          <p class="day">{{ active.data.day }}</p>
+          <p class="day">{{ active.day }}</p>
         </div>
         <div class="countrys">
           <span class="adress iconfont icon-daohang-"></span>
-          <span class="city">{{ active.data.adress }}</span>
+          <span class="city">{{ active.adress }}</span>
           <div>报名参加</div>
         </div>
       </div>
@@ -68,6 +68,7 @@ export default {
         });
       }
       this.activeList = res.data.data;
+      this.$bus.$emit("showMessage", res.data.data);
     },
   },
 };
@@ -84,12 +85,14 @@ export default {
   width: 100%;
   position: relative;
   .activeContainer:hover {
+    // color: #666;
     text-decoration: none;
     transform: translateY(-3px);
     transition: transform 400ms;
     box-shadow: 2px 5px 5px rgb(228, 219, 219); //底部阴影
     .item {
       box-shadow: none;
+      color: #666;
     }
   }
   .activeContainer {
