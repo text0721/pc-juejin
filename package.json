@@ -11,6 +11,8 @@
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "element-ui": "^2.4.5",
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0",
     "less": "^4.0.0",
     "less-loader": "^7.2.1",
     "mockjs": "^1.1.0",
