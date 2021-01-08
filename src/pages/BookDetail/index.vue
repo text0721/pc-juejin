@@ -179,14 +179,8 @@ export default {
   name: "BookDetail",
   data() {
     return {
-      // bookDetail: {},
       bookDetailData: {},
     };
-  },
-  computed: {
-    // ...mapState({
-    //   bookDataList: (state) => state.book.bookDataList,
-    // }),
   },
   methods: {
     toBuy() {
@@ -205,14 +199,9 @@ export default {
     let bookDetailData = await axios({
       baseURL: `/api/getBookDetailList?id=${id}`,
       method: "GET",
-      // data: {
-      //   booklet_id: id,
-      // },
     });
-    // this.bookDetailData = bookDetailData;
+
     this.bookDetailData = bookDetailData.data.data;
-    console.log(this.bookDetailData);
-    //  this.$refs.content.innerHTML=this.bookDetailData.introduction.conten
   },
 };
 </script>

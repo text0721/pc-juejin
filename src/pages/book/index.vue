@@ -98,56 +98,19 @@
 </template>
 
 <script>
-// import axios from "axios";
 import { mapState } from "vuex";
 export default {
   name: "Book",
   data() {
-    return {
-      // options: {
-      //   category_id: "0",
-      //   cursor: "0",
-      //   limit: 20,
-      // },
-    };
+    return {};
   },
   computed: {
     ...mapState({
       bookDataList: (state) => state.book.bookDataList,
-      // bookList: (state) => state.book.bookList,
     }),
   },
-  methods: {
-    // ...mapActions["getBook"],
-  },
   async mounted() {
-    //   let appdata = await axios({
-    //     baseURL: `/api/getAppData?aid=2608&not_self=0`,
-    //     // params: {
-    //     //   aid: 2608,
-    //     //   not_self: 0,
-    //     // },
-    //   });
-    //   console.log(appdata);
-
     await this.$store.dispatch("GetBookData");
-    // console.log(this.bookDataList);
-    // this.getBook(this.options);
-    // console.log(this.bookList);
-    //  await axios({
-    //     header: { "Access-Control-Allow-Origin": '*' },
-    //     method: "POST",
-    //     url: "https://api.juejin.cn/booklet_api/v1/booklet/listbycategory",
-    //     data: {
-    //       category_id: "0",
-    //       cursor: "0",
-    //       limit: 20,
-    //     },
-    //   }).then((res) => {
-    //     console.log(res);
-    //   });
-    // this.$store.dispatch("reqBookList");
-    // console.log(this.reqBookList);
   },
 };
 </script>
