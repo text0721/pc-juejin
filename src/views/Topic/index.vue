@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="fixed"><Header /></div>
+    <div class="fixed">
+      <Header />
+    </div>
 
     <div class="Topic">
       <!-- 最左 -->
@@ -19,7 +21,6 @@
           </ul>
         </nav>
       </div>
-      <!-- <Topic_left /> -->
       <!-- 中间 -->
       <div class="Topic-main">
         <div class="wrapper">
@@ -201,7 +202,7 @@
           <img :src="item.imgUrl" alt="" />
           <span>如何玩转屁股</span>
         </a>
-        <!-- 悬浮，后面开起来 -->
+        <!-- 悬浮-->
         <div class="play-link-show" id="scrolls">
           <a class="play-link" href="#">
             <img :src="item.imgUrl" alt="" />
@@ -217,7 +218,6 @@
 import Header from "../Header";
 import axios from "axios";
 import "../../styles/topic.css";
-// import { getData } from "../../api/Topic";
 import { mapState, mapGetters, mapActions, mapMutations } from "vuex";
 
 export default {
@@ -225,8 +225,6 @@ export default {
   data() {
     return {
       axios,
-      // getData: "",
-
       task: "", //评论内容
       imgUrl: "", //评论图片地址
       save: "", //分类
@@ -245,7 +243,6 @@ export default {
     ...mapMutations(["SETTOPICMAIN"]),
     addTask() {
       // 发布信息
-      // console.log(this.task);
       // 这边可以加个消息提示
       if (!this.task) return;
       //1- 收集数据
@@ -275,10 +272,9 @@ export default {
     },
 
     scrollEvent() {
-      const scrollTop = window.pageYOffset; // div 到头部的距离
+      const scrollTop = window.pageYOffset;
 
       if (scrollTop > 500) {
-        // div 到头部的距离 + 屏幕高度 = 可滚动的总高度
         document.getElementById("scroll").style.display = "none";
         document.getElementById("scrolls").style.display = "block";
       } else {
@@ -289,9 +285,6 @@ export default {
   },
   async mounted() {
     this.getTopicData();
-    // this.getData = await getData();
-    // console.log(this.getData);
-    // 监听滚轮
     window.addEventListener("scroll", this.scrollEvent, false);
   },
   watch: {},

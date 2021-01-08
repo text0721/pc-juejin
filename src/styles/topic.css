@@ -62,7 +62,7 @@ a {
 }
 
 /* 中间区域 */
-.Topic-main{
+.Topic-main {
   margin-top: 70px;
 }
 .Topic-main .wrapper {
@@ -94,7 +94,6 @@ a {
   color: #007fff;
   font-size: 6px;
   margin: 0 5px;
-  /* float: left; */
 }
 .editor-dialog .botton .toolbar {
   display: flex;
@@ -114,7 +113,6 @@ a {
   margin: 0 5px;
   padding: 7px 15px;
   outline: none;
-  /* transition: background-color 0.3s, color 0.3s; */
   cursor: pointer;
 }
 
@@ -422,7 +420,6 @@ a {
 .Topic-right .play-link-show {
   opacity: 1;
   z-index: 5;
-  /* pointer-events: all; */
   position: fixed;
   top: 70px;
 }

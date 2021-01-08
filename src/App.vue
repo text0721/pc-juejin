@@ -1,26 +1,14 @@
 <template>
   <div id="app">
-   
-    <Topic />
+    <router-view />
   </div>
 </template>
 
 <script>
 
-import Topic from "./views/Topic";
-// import axios from "axios";
-
 export default {
   name: "app",
   components: {
-
-    Topic,
-    // async mounted() {
-    //   const a = await axios({
-    //     baseURL: `/api/getindexCateList`,
-    //   });
-    //   console.log(a.data.data);
-    // },
   },
 };
 </script>
