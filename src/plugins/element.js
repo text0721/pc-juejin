@@ -1,6 +1,10 @@
 import Vue from "vue";
-import { Button } from "element-ui";
+import { Button, Message, Card, MessageBox, Icon } from "element-ui";
 
 Vue.use(Button);
-// Vue.use(Steps);
-// Vue.use(Step);
+Vue.use(Card);
+Vue.use(Icon);
+
+Vue.prototype.$message = Message;
+Vue.prototype.$alert = MessageBox.alert;
+Vue.prototype.$prompt = MessageBox.prompt;

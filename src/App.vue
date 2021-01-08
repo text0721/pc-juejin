@@ -1,18 +1,25 @@
 <template>
-  <div>
-    <Book />
+  <div id="app">
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import Book from "./pages/Book";
+// import axios from "axios";
+
 export default {
-  name: "App",
-  components: {
-    Book,
-  },
+  name: "app",
+  // async mounted() {
+  //   const a = await axios({
+  //     baseURL: `/api/getindexCateList`,
+  //   });
+  //   console.log(a.data.data);
+  // },
 };
 </script>
 
-<style lang='less' scoped>
+<style>
+body {
+  background-color: #f4f5f6;
+}
 </style>
