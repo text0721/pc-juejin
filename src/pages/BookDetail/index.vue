@@ -477,11 +477,20 @@ a {
   padding: 10px;
   box-sizing: border-box;
   position: relative;
-  img {
-    position: absolute;
-    // overflow: hidden;
-    // box-sizing: border-box;
+  h3 {
+    margin: 20px 0;
   }
+  p {
+    margin: 10px 0;
+    img {
+      position: absolute;
+      // overflow: hidden;
+      // box-sizing: border-box;
+      width: 660px;
+      height: 520px;
+    }
+  }
+
   overflow: hidden;
 }
 </style>
