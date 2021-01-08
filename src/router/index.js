@@ -2,8 +2,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import Home from "../views/Home";
-import Topic from "../views/Topic";
+import Home from "../pages/Home";
+import Topic from "../pages/Topic";
 
 // 重写push和replace方法
 // 目的：为了让编程式导航重复点击时不报错~
