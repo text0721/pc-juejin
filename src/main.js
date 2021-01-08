@@ -1,16 +1,22 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from "./router/index"
-import store from "./store"
-import './plugins/element.js'
-import "./styles/reset.css"
-Vue.config.productionTip = false
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router/index";
+import store from "./store";
+import "./plugins/element.js";
+import "./styles/reset.css";
+Vue.config.productionTip = false;
 
-new Vue( {
-  beforeCreate () {
-    Vue.prototype.$bus = this
+// 引入公共资源
+import "./styles/reset.css";
+import "./styles/iconfont.css";
+
+Vue.config.productionTip = false;
+
+new Vue({
+  beforeCreate() {
+    Vue.prototype.$bus = this;
   },
-  render: ( h ) => h( App ),
+  render: (h) => h(App),
   router,
   store,
-} ).$mount( "#app" );
+}).$mount("#app");

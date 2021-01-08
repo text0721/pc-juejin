@@ -16,10 +16,10 @@
           <router-link to="">沸点</router-link>
         </li>
         <li :class="{ active: changActive === 3 }" @click="changeActive(3)">
-          <router-link to="/book">小册</router-link>
+          <router-link to="/books">小册</router-link>
         </li>
         <li :class="{ active: changActive === 4 }" @click="changeActive(4)">
-          <router-link to="">活动</router-link>
+          <router-link to="/active">活动</router-link>
         </li>
       </ul>
       <div class="header-content">
