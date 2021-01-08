@@ -10,7 +10,11 @@ import BookDetail from "../pages/BookDetail";
 import Payment from "../pages/Payment";
 import Topay from "../pages/Topay";
 import Home from "../pages/home.vue";
+<<<<<<< HEAD
 import Topic from "../pages/Topic";
+=======
+import Active from "../pages/active/active.vue";
+>>>>>>> xiafenxiao
 
 // 重写push和replace方法
 // 目的：为了让编程式导航重复点击时不报错~
@@ -45,6 +49,7 @@ export default new VueRouter({
       component: Home,
     },
     {
+<<<<<<< HEAD
       path: "/following",
       component: HomeContent,
     },
@@ -110,6 +115,11 @@ export default new VueRouter({
     {
       path: "/topic",
       component: Topic,
+=======
+      path: "/active",
+      name: "active",
+      component: Active,
+>>>>>>> xiafenxiao
     },
   ],
   scrollBehavior() {
